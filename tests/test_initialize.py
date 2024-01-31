@@ -15,35 +15,35 @@ def test_empty_init_params():
 
 def test_init_params():
     try:
-        gdd = GDD({'min_temperature': 1, 'max_temperature': 2, 'threshold_low': 3})
+        gdd = GDD({'min_temp': 1, 'max_temp': 2, 'threshold_low': 3})
     except Exception as e:
         assert False, f"test_init_params raised an exception {e}"
 
-def test_init_params_min_temperature():
+def test_init_params_min_temp():
     try:
-        gdd = GDD({'min_temperature': 1})
-        assert gdd.min_temperature == 1
+        gdd = GDD({'min_temp': 1})
+        assert gdd.min_temp == 1
     except Exception as e:
-        assert False, f"test_init_params_min_temperature raised an exception {e}"
+        assert False, f"test_init_params_min_temp raised an exception {e}"
 
     with pytest.raises(TypeError):
-        gdd = GDD({'min_temperature': '1'})
+        gdd = GDD({'min_temp': '1'})
     
     with pytest.raises(TypeError):
-        gdd = GDD({'min_temperature': None})
+        gdd = GDD({'min_temp': None})
 
-def test_init_params_max_temperature():
+def test_init_params_max_temp():
     try:
-        gdd = GDD({'max_temperature': 2})
-        assert gdd.max_temperature == 2
+        gdd = GDD({'max_temp': 2})
+        assert gdd.max_temp == 2
     except Exception as e:
-        assert False, f"test_init_params_max_temperature raised an exception {e}"
+        assert False, f"test_init_params_max_temp raised an exception {e}"
 
     with pytest.raises(TypeError):
-        gdd = GDD({'max_temperature': '2'})
+        gdd = GDD({'max_temp': '2'})
     
     with pytest.raises(TypeError):
-        gdd = GDD({'max_temperature': None})
+        gdd = GDD({'max_temp': None})
 
 def test_init_params_threshold_low():
     try:

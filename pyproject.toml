@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gddPy"
-version = "1.0.2"
+version = "1.0.3"
 description = "Library to calculate the growing degree days (GDD) with various formulas"
 authors = ["Jonathan Hsu <jhsu98@gmail.com>"]
 license = "MIT"
